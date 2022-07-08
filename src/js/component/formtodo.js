@@ -10,6 +10,16 @@ function FormTodo({ addTodo }) {
 		setValue("");
 	};
 
+	/*  
+	const updateTodo = (todoId, newValue) => {
+    if (!newValue.text || /^\s*$/.test(newValue.text)) {
+      return;
+    }
+
+    setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+  }; 
+  */
+
 	return (
 		<form onSubmit={handleSubmit}>
 			<div className="input-group mb-3">
@@ -22,7 +32,7 @@ function FormTodo({ addTodo }) {
 						setValue(e.target.value);
 					}}
 				/>
-				<button className="btn btn-outline-secondary" type="submit">
+				<button className="btn btn-outline-light" type="submit">
 					+
 				</button>
 			</div>

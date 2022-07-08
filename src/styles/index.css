@@ -11,15 +11,21 @@ body{
     background: linear-gradient(
       90deg,
       rgba(48, 16, 255, 1) 0%,
-      rgba(100, 115, 255, 1) 100%
+      rgb(179, 185, 240) 100%
     );
     color: #fff;
-    font-size: 24px;
-  }
-
-  #app {
-    font-size: 18px;
     
   }
 
+  #Box {
+    width: 50%;
+    font-size: 14px;
   
+  }
+
+  @media screen and (max-width: 600px) {
+    #Box {
+      width: 90%;
+      font-size:10px;
+    }
+  }

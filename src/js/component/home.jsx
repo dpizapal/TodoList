@@ -26,9 +26,10 @@ const Home = () => {
 	};
 
 	return (
-		<div className="container border border-dark bg-secondary text-center w-50 mt-5 pt-2 pb-4">
-			<h1 className="fw-light mt-2">What's the Plan for Today?</h1>
-			<h3 className="fw-light mt-3">Tasks: {todos.length}</h3>
+		
+		<div id="Box" className="container border rounded border-dark bg-secondary text-center  mt-5 pt-2 pb-4">
+			<h2 className="fw-light mt-2">What's the Plan for Today?</h2>
+			<h3 className="fw-light mt-3 rounded">Tasks: {todos.length}</h3>
 			<FormTodo addTodo={addTodo} />
 			<div className="todo-app">
 				{todos.map((todo, index) => (
@@ -42,6 +43,7 @@ const Home = () => {
 				))}
 			</div>
 		</div>
+		
 	);
 };
 
