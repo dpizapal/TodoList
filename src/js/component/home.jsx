@@ -26,11 +26,11 @@ const Home = () => {
 	};
 
 	return (
-		<div className="container border border-dark text-center w-50 mt-5">
-			<h1 className="fw-light">To-Do List</h1>
-			<h3 className="fw-light">Tasks: {todos.length}</h3>
+		<div className="container border border-dark bg-secondary text-center w-50 mt-5 pt-2 pb-4">
+			<h1 className="fw-light mt-2">What's the Plan for Today?</h1>
+			<h3 className="fw-light mt-3">Tasks: {todos.length}</h3>
 			<FormTodo addTodo={addTodo} />
-			<div>
+			<div className="todo-app">
 				{todos.map((todo, index) => (
 					<Todo
 						key={index}
