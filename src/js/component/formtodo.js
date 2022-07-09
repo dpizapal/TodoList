@@ -6,19 +6,32 @@ function FormTodo({ addTodo }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (!value) return;
-		addTodo(value);
-		setValue("");
+		for(let i=0; i<value.length;i++){
+			if(value [i] != " "){
+				addTodo(value)
+				setValue("");
+				break;
+
+			}
+		}
 	};
 
-	/*  
-	const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return;
-    }
 
-    setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
-  }; 
-  */
+
+/*
+	const handleSubmit = (e) => {
+	e.preventDefault();
+    if (!value.text || /^\s*$/.test(value.text)) {
+		
+      return;
+    } 
+	addTodo(value)
+	setValue("");
+	}
+	*/
+
+
+  
 
 	return (
 		<form onSubmit={handleSubmit}>
